@@ -1,95 +1,29 @@
 import React from 'react';
-import DogsItemStar from './DogsItemStar';
+import DogsItemScore from './DogsItemScore';
+import PropTypes from 'prop-types';
 
-const DogsCharact = (props) =>{
-
-        const { infoItems:{ itemVitalidad, itemLadrador, itemVigilancia, itemProteccion,
-                            itemRelaNinos, itemRelaPerros, itemAprendizaje, itemEjercicio } }  = props;
-        //Doble destructuring
-        const { infoItems:{ imgStar:{ imgStarOnUrl,  imgStarOnAlt, imgStarOffUrl, imgStarOffAlt } } } = props;
-
+const DogsCharact = ({item, score:[img1, img2, img3, img4, img5 ]}) =>{
+     
         return (<div>
             <div className="Items-title"> 
-                 <p className="P-title">{itemVitalidad}</p>
+                 <p className="P-title">{ item }</p>  
             </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemLadrador}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemVigilancia}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemProteccion}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemRelaNinos}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemRelaPerros}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemAprendizaje}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-            </div>
-            <div className="Items-title"> 
-                 <p className="P-title">{itemEjercicio}</p>
-            </div>    
-            <div className="Items-title">      
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOnUrl}  allStart={ imgStarOnAlt} ></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
-                <DogsItemStar imgStar= {imgStarOffUrl} allStart={ imgStarOffAlt}></DogsItemStar>
+            <div className="Items-title">  
+                    <DogsItemScore imgStar={ img1 }/>
+                    <DogsItemScore imgStar={ img2 }/>
+                    <DogsItemScore imgStar={ img3 }/>
+                    <DogsItemScore imgStar={ img4 }/>
+                    <DogsItemScore imgStar={ img5 }/>
             </div>
          </div>)
 };
+
+DogsCharact.propTypes = {
+        item: PropTypes.string.isRequired, 
+        score: PropTypes.arrayOf(PropTypes.array),
+       
+}
+
+
 
 export default DogsCharact;
